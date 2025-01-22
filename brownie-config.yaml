@@ -1,0 +1,28 @@
+∫dependencies:
+  #- <organization/repo>@<version>
+  - OpenZeppelin/openzeppelin-contracts@4.5.0
+  - smartcontractkit/chainlink-brownie-contracts@1.1.1
+
+compiler:
+  solc:
+    remappings:
+      - "@openzeppelin=OpenZeppelin/openzeppelin-contracts@4.5.0"
+      - "@chainlink=smartcontractkit/chainlink@1.4.1"
+networks:
+  default: development
+  development:
+    verify: False
+  goerli:
+    verify: True
+  mainnet-fork:
+    verify: False
+  ganache-local:
+    verify: False
+  arbitrum-main:
+    verify: True
+settings:
+  gas_limit: "100000000000"
+wallets:
+  from_key: ${PRIVATE_KEY}
+  from_key1: ${PRIVATE_KEY1}
+  from_key2: ${PRIVATE_KEY2}
